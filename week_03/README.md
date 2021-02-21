@@ -59,7 +59,7 @@
 
    |                        | `str` | `list` | `deque` |
    | ---------------------- | ----- | ------ | ------- |
-   | `check_palindrome_1`   |  O(n) |        |         |
+   | `check_palindrome_1`   |  O(n) |   O(n) |    O(n) |
    | `check_palindrome_2`   |       |        |         |
 
    **HINT:**
