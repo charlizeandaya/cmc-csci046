@@ -64,14 +64,14 @@ There are two tables for you to fill out and submit to sakai.
 
    |                | `sequential_search_itr`   | `binary_search_itr`   |
    | -------------- | ------------------------- | --------------------- | 
-   | `n=1`          |                           |                       |
-   | `n=10`         |                           |                       |
-   | `n=100`        |                           |                       |
-   | `n=1000`       |                           |                       |
-   | `n=10000`      |                           |                       |
-   | `n=100000`     |                           |                       |
-   | `n=1000000`    |                           |                       |
-   | `n=10000000`   |                           |                       |
+   | `n=1`          |         0.14 usec         |     0.345 usec        |
+   | `n=10`         |        0.441 usec         |     0.852 usec        |
+   | `n=100`        |         2.31 usec         |     1.03 usec         |
+   | `n=1000`       |         21.7 usec         |     1.66 usec         |
+   | `n=10000`      |         206 usec          |     2.28 usec         |
+   | `n=100000`     |         2.16 msec         |     2.57 usec         |
+   | `n=1000000`    |         20.7 msec         |     2.93 usec         |
+   | `n=10000000`   |         217 msec          |     3.74 usec         |
 
    In my experiments:
    1. I get that binary search with `n=10000000` is faster than sequential search with `n=100`.
@@ -170,11 +170,11 @@ There are two tables for you to fill out and submit to sakai.
 
    |                            | `array`  | `list`  | `tuple`     | `deque`       |
    | -------------------------- | ---------| --------|------------ | ------------- |
-   | `sequential_search_itr`    |          |         |             |               |
+   | `sequential_search_itr`    |13.3 msec |2.06 msec| 2.12 msec   |  2.11 msec    |
    | `sequential_search_rec`    |  ---     | ---     |  ---        |  ---          |
-   | `binary_search_itr`        |          |         |             |               |
-   | `binary_search_rec`        |          |         |             |               |
-   | `binary_search_rec2`       |          |         |             |  ---          |
+   | `binary_search_itr`        |9.98 usec |2.75 usec| 2.67 usec   |  288 usec     |
+   | `binary_search_rec`        |12.2 usec |4.99 usec| 4.89 usec   |  297 usec     |
+   | `binary_search_rec2`       |10.7 usec |694 usec | 675 usec    |  ---          |
 
    You should notice that:
    1. for the `array` container, all implementations of binary search work well
